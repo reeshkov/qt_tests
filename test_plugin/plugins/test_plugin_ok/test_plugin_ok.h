@@ -12,7 +12,7 @@ class Test_plugin_ok: public PluginInterface
 public:
 
   Test_plugin_ok();
-  bool pubFunc1(MyQObject*);
+  bool pubFunc1(MyQObject&);
 };
 
 #endif // TEST_PLUGIN_OK_H

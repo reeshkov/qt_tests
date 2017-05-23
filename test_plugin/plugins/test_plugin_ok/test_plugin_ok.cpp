@@ -8,14 +8,14 @@ Test_plugin_ok::Test_plugin_ok()
 
 
 
-bool Test_plugin_ok::pubFunc1(MyQObject *pdata1){
-  qDebug() << "Plugin OK"<< this->metaObject()->className();// << pdata1->objectName();
-  qDebug() << "Plugin Int 1 ="<< pdata1->testInt;
-  pdata1->testInt++;
-  qDebug() << "Plugin Int 2 ="<< pdata1->testInt;
-//  qDebug() << "Plugin func pointer=" << pdata1->MyQObject::pTest();
-  qDebug() << "Plugin func pointer=" << pdata1->pTest();
-  qDebug() << "Plugin func=" << pdata1->testCalll();
+bool Test_plugin_ok::pubFunc1(MyQObject &pdata1){
+  qDebug() << "Plugin OK"<< this->metaObject()->className();// << pdata1.objectName();
+  qDebug() << "Plugin Int 1 ="<< pdata1.testInt;
+  pdata1.testInt++;
+  qDebug() << "Plugin Int 2 ="<< pdata1.testInt;
+//  qDebug() << "Plugin func pointer=" << pdata1.MyQObject::pTest();
+  qDebug() << "Plugin func pointer=" << pdata1.pTest();
+  qDebug() << "Plugin func=" << pdata1.testCalll();
   return false;
 }
 

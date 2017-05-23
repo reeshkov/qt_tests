@@ -17,8 +17,8 @@
   {
     Q_OBJECT
   public:
-    virtual bool pubFunc1(MyQObject *data){
-      qDebug() << this->metaObject()->className() << data->objectName();
+    virtual bool pubFunc1(MyQObject &link){
+      qDebug() << this->metaObject()->className() << link.objectName();
       return true;}
     //virtual bool pubFunc();
     //bool pubFunc(){return true;}

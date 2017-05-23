@@ -15,7 +15,7 @@ class PluginsLoader : public QObject
 public:
   explicit PluginsLoader(QObject*);
   ~PluginsLoader();
-
+  MyQObject mqo;
 signals:
   void sigPluginLoaded(QString);
   void loadfinished();

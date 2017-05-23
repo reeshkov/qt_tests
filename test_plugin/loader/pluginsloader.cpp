@@ -31,7 +31,7 @@ void PluginsLoader::loadPlugins(){
       PluginInterface *plugin = qobject_cast<PluginInterface*>(oplugin);
       if(plugin){
         qDebug()<< "Initalize plugin: "+ fileName << oplugin->metaObject()->className();
-        MyQObject *mqo = new MyQObject();
+
         qDebug()<< plugin->pubFunc1( mqo );
       }else{
         qWarning() << "Fail cast from plugin: " + fileName << oplugin->metaObject()->className();
