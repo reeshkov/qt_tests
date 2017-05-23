@@ -1,0 +1,12 @@
+#ifndef TEST_PLUGIN_OK_GLOBAL_H
+#define TEST_PLUGIN_OK_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(TEST_PLUGIN_OK_LIBRARY)
+#  define TEST_PLUGIN_OKSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define TEST_PLUGIN_OKSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // TEST_PLUGIN_OK_GLOBAL_H
